@@ -1311,7 +1311,7 @@ module VmCommon
 
     @edit[:current][:parent] = @edit[:new][:parent]
     @edit[:current][:kids] = @edit[:new][:kids].dup
-    binding.pry
+    #binding.pry
     session[:edit] = @edit
   end
 
