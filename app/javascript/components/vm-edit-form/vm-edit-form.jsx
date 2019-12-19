@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from 'patternfly-react';
 import MiqFormRenderer from '../../forms/data-driven-form';
@@ -13,9 +13,13 @@ class VmEditForm extends Component {
     this.state = {
       isLoaded: false,
     };
-    console.log(this.props.kind);
+    console.log(this.kind);
   }
 
+  /* const [loaded, setloaded] = useState(false); */
+
+
+  /* loadData() => {} */
   componentDidMount() {
     miqSparkleOn();
     const { choices } = this.props;
@@ -55,6 +59,13 @@ class VmEditForm extends Component {
       });
     }
   }
+  /*
+  useEffect (() => {
+    if(!loaded) {
+      loadData();
+      setLoaded(true);
+    }
+  }) */
 
   submitValues = (values) => {
     const val = {
